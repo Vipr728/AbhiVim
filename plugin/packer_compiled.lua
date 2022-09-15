@@ -99,10 +99,33 @@ _G.packer_plugins = {
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["dashboard-nvim"] = {
+    loaded = true,
+    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
+    url = "https://github.com/glepnir/dashboard-nvim"
+  },
   edge = {
     loaded = true,
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/edge",
     url = "https://github.com/sainnhe/edge"
+  },
+  ["essentials.nvim"] = {
+    loaded = true,
+    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/essentials.nvim",
+    url = "https://github.com/tamton-aquib/essentials.nvim"
+  },
+  ["mason-null-ls.nvim"] = {
+    config = { "\27LJ\2\n€\1\0\0\3\0\5\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\4\0+\2\2\0B\0\2\1K\0\1\0\18check_install\1\0\1\27automatic_installation\2\nsetup\18mason-null-ls\frequire\0" },
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/abhinav/.local/share/nvim/site/pack/packer/opt/mason-null-ls.nvim",
+    url = "https://github.com/jayp0521/mason-null-ls.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
   },
   ["moonlight.nvim"] = {
     loaded = true,
@@ -113,6 +136,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/neovim",
     url = "https://github.com/rose-pine/neovim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   nvim = {
     loaded = true,
@@ -154,10 +182,20 @@ _G.packer_plugins = {
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
   ["staline.nvim"] = {
     loaded = true,
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/staline.nvim",
     url = "https://github.com/tamton-aquib/staline.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
@@ -175,7 +213,7 @@ _G.packer_plugins = {
     url = "https://github.com/xolox/vim-misc"
   },
   ["which-key.nvim"] = {
-    config = { "require('which-key-config')" },
+    config = { "require('user/which-key-config')" },
     loaded = true,
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
@@ -185,8 +223,18 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
-require('which-key-config')
+require('user/which-key-config')
 time([[Config for which-key.nvim]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd mason.nvim ]]
+vim.cmd [[ packadd null-ls.nvim ]]
+vim.cmd [[ packadd mason-null-ls.nvim ]]
+
+-- Config for: mason-null-ls.nvim
+try_loadstring("\27LJ\2\n€\1\0\0\3\0\5\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\4\0+\2\2\0B\0\2\1K\0\1\0\18check_install\1\0\1\27automatic_installation\2\nsetup\18mason-null-ls\frequire\0", "config", "mason-null-ls.nvim")
+
+time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
