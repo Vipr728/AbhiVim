@@ -114,14 +114,6 @@ _G.packer_plugins = {
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/essentials.nvim",
     url = "https://github.com/tamton-aquib/essentials.nvim"
   },
-  ["mason-null-ls.nvim"] = {
-    config = { "\27LJ\2\n€\1\0\0\3\0\5\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\4\0+\2\2\0B\0\2\1K\0\1\0\18check_install\1\0\1\27automatic_installation\2\nsetup\18mason-null-ls\frequire\0" },
-    load_after = {},
-    loaded = true,
-    needs_bufread = false,
-    path = "/home/abhinav/.local/share/nvim/site/pack/packer/opt/mason-null-ls.nvim",
-    url = "https://github.com/jayp0521/mason-null-ls.nvim"
-  },
   ["mason.nvim"] = {
     loaded = true,
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/mason.nvim",
@@ -131,6 +123,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/moonlight.nvim",
     url = "https://github.com/shaunsingh/moonlight.nvim"
+  },
+  neon = {
+    loaded = true,
+    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/neon",
+    url = "https://github.com/rafamadriz/neon"
   },
   neovim = {
     loaded = true,
@@ -176,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/onedark.vim",
     url = "https://github.com/joshdick/onedark.vim"
+  },
+  ["oxocarbon.nvim"] = {
+    loaded = true,
+    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim",
+    url = "https://github.com/shaunsingh/oxocarbon.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -225,16 +227,6 @@ time([[Defining packer_plugins]], false)
 time([[Config for which-key.nvim]], true)
 require('user/which-key-config')
 time([[Config for which-key.nvim]], false)
--- Load plugins in order defined by `after`
-time([[Sequenced loading]], true)
-vim.cmd [[ packadd mason.nvim ]]
-vim.cmd [[ packadd null-ls.nvim ]]
-vim.cmd [[ packadd mason-null-ls.nvim ]]
-
--- Config for: mason-null-ls.nvim
-try_loadstring("\27LJ\2\n€\1\0\0\3\0\5\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\4\0+\2\2\0B\0\2\1K\0\1\0\18check_install\1\0\1\27automatic_installation\2\nsetup\18mason-null-ls\frequire\0", "config", "mason-null-ls.nvim")
-
-time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

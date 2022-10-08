@@ -32,9 +32,11 @@ require("user/keybindings")
 require("user/bufferline-config")
 require("user/lsp")
 require("user/dashboard")
-vim.cmd("colorscheme moonlight")
-vim.g.edge_style = ''
-vim.g.edge_better_performance = 1
+vim.g.neon_style = "dark"
+vim.g.neon_italic_keyword = true
+vim.g.neon_italic_function = true
+
+vim.cmd[[colorscheme neon]]
 
 
 

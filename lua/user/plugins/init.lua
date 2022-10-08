@@ -10,7 +10,8 @@ return require('packer').startup(function(use)
   use 'shaunsingh/moonlight.nvim'
   use 'catppuccin/nvim'
   use 'folke/tokyonight.nvim'
-
+  use "rafamadriz/neon"
+  use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
   --plenary
   use 'nvim-lua/plenary.nvim'
 
@@ -64,20 +65,6 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'williamboman/mason.nvim'
   use 'jose-elias-alvarez/null-ls.nvim'
-
-  use {
-	"jayp0521/mason-null-ls.nvim",
-	after = {
-		"null-ls.nvim",
-		"mason.nvim",
-	},
-	config = function()
-		require("mason-null-ls").setup({
-			automatic_installation = true,
-		})
-		require("mason-null-ls").check_install(true)
-	end,
-}
 
   --dashboard
   use 'glepnir/dashboard-nvim'
