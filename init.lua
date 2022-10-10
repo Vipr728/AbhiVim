@@ -22,7 +22,6 @@ vim.opt.mouse="a"
 vim.opt.termguicolors=true
 vim.opt.timeoutlen=500
 vim.opt.foldtext = 'v:lua.require("essentials").simple_fold()'
-
 --include all plugins, and packer.nvim
 require("user/plugins")
 require("user/staline-config")
@@ -32,6 +31,8 @@ require("user/keybindings")
 require("user/bufferline-config")
 require("user/lsp")
 require("user/dashboard")
+require("user/autopairs-config")
+require("user/ToggleTerm-config")
 vim.g.neon_style = "dark"
 vim.g.neon_italic_keyword = true
 vim.g.neon_italic_function = true

@@ -12,10 +12,19 @@ return require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
   use "rafamadriz/neon"
   use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
+  --toggleTerm
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+  require("toggleterm").setup()
+  end}
   --plenary
   use 'nvim-lua/plenary.nvim'
 
-
+  --autopairs
+  use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
+  use 'jiangmiao/auto-pairs'
   --bufferline, statusline, telescope
   use 'tamton-aquib/staline.nvim'
 
@@ -65,6 +74,8 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'williamboman/mason.nvim'
   use 'jose-elias-alvarez/null-ls.nvim'
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
 
   --dashboard
   use 'glepnir/dashboard-nvim'

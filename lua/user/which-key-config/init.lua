@@ -15,7 +15,10 @@ local mappings = {
     l = {"<C-w>l", "move focus to left pane"},
     j = {"<C-w>j", "move focus to lower pane"},
     k = {"<C-w>k", "move focus to upper pane"},
-    e = {":NvimTreeToggle<CR>", "NvimTree"}
+    e = {":NvimTreeToggle<CR>", "NvimTree"},
+    ff = {":Telescope find_files<CR>", "Telescope"},
+    fb = {":NvimTreeToggle<CR>", "File Browser"},
+    fd = {":e $MYVIMRC<CR>", "Edit Config Files"},
 }
 local opts = {prefix = '<leader>'}
 wk.register(mappings, opts)
