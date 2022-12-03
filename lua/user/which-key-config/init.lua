@@ -2,7 +2,7 @@ vim.g.mapleader = ' '
 local wk = require("which-key")
 local mappings = {
     q = {":q<CR>", "Quit"},
-    w = {":w<CR>", "Save"},
+    w = {":w<CR>", "Save", noremap = true},
     --toggle nvim tree so that it doesnt take up all of the screen space
     x = {":bdelete<CR><bar>:NvimTreeToggle<CR><bar>:NvimTreeToggle<CR><ESC><bar><c-w>h", "Delete Buffer", noremap = false},
     X = {":bdelete!<CR><bar>:NvimTreeToggle<CR><bar>:NvimTreeToggle<CR><ESC><bar><c-w>h", "Force Delete Buffer", noremap = false},
