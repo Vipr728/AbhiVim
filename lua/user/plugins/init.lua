@@ -12,8 +12,6 @@ return require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
   use "rafamadriz/neon"
   use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
-  use "ThePrimeagen/vim-be-good"
-  use "mattn/flappyvird-vim"
   --toggleTerm
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
   require("toggleterm").setup()
@@ -78,13 +76,7 @@ return require('packer').startup(function(use)
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
-  use 'L3MON4D3/LuaSnip'
 
   --dashboard
   use 'glepnir/dashboard-nvim'
-
-  --LATEX 
-  use {'xuhdev/vim-latex-live-preview'}
-  use  "frabjous/knap"
-  use 'lervag/vimtex'
 end)

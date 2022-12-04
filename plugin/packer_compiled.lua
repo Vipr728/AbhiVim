@@ -74,16 +74,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  LuaSnip = {
-    loaded = true,
-    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/LuaSnip",
-    url = "https://github.com/L3MON4D3/LuaSnip"
-  },
-  ["auto-pairs"] = {
-    loaded = true,
-    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/auto-pairs",
-    url = "https://github.com/jiangmiao/auto-pairs"
-  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -109,11 +99,6 @@ _G.packer_plugins = {
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  ["cmp-vsnip"] = {
-    loaded = true,
-    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
-    url = "https://github.com/hrsh7th/cmp-vsnip"
-  },
   ["dashboard-nvim"] = {
     loaded = true,
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
@@ -128,16 +113,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/essentials.nvim",
     url = "https://github.com/tamton-aquib/essentials.nvim"
-  },
-  ["flappyvird-vim"] = {
-    loaded = true,
-    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/flappyvird-vim",
-    url = "https://github.com/mattn/flappyvird-vim"
-  },
-  knap = {
-    loaded = true,
-    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/knap",
-    url = "https://github.com/frabjous/knap"
   },
   ["mason.nvim"] = {
     loaded = true,
@@ -168,12 +143,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/nvim",
     url = "https://github.com/catppuccin/nvim"
-  },
-  ["nvim-autopairs"] = {
-    config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
-    loaded = true,
-    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
-    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -230,46 +199,20 @@ _G.packer_plugins = {
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["toggleterm.nvim"] = {
-    config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0" },
-    loaded = true,
-    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
-    url = "https://github.com/akinsho/toggleterm.nvim"
-  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
-  },
-  ["vim-be-good"] = {
-    loaded = true,
-    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/vim-be-good",
-    url = "https://github.com/ThePrimeagen/vim-be-good"
   },
   ["vim-colorscheme-switcher"] = {
     loaded = true,
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/vim-colorscheme-switcher",
     url = "https://github.com/xolox/vim-colorscheme-switcher"
   },
-  ["vim-latex-live-preview"] = {
-    loaded = true,
-    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/vim-latex-live-preview",
-    url = "https://github.com/xuhdev/vim-latex-live-preview"
-  },
   ["vim-misc"] = {
     loaded = true,
     path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/vim-misc",
     url = "https://github.com/xolox/vim-misc"
-  },
-  ["vim-vsnip"] = {
-    loaded = true,
-    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/vim-vsnip",
-    url = "https://github.com/hrsh7th/vim-vsnip"
-  },
-  vimtex = {
-    loaded = true,
-    path = "/home/abhinav/.local/share/nvim/site/pack/packer/start/vimtex",
-    url = "https://github.com/lervag/vimtex"
   },
   ["which-key.nvim"] = {
     config = { "require('user/which-key-config')" },
@@ -284,14 +227,6 @@ time([[Defining packer_plugins]], false)
 time([[Config for which-key.nvim]], true)
 require('user/which-key-config')
 time([[Config for which-key.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
-time([[Config for toggleterm.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
