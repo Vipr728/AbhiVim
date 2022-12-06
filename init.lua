@@ -1,5 +1,4 @@
-vim.opt.tabstop=4
-vim.opt.softtabstop=4
+vim.opt.tabstop=4 vim.opt.softtabstop=4
 vim.opt.shiftwidth=4
 vim.opt.expandtab=true
 vim.opt.smartindent=true
@@ -24,7 +23,8 @@ vim.opt.timeoutlen=500
 vim.opt.foldtext = 'v:lua.require("essentials").simple_fold()'
 --include all plugins, and packer.nvim
 require("user/plugins")
-require("user/staline-config")
+require("user/treesitter-config")
+require("user/lualine-config")
 require("user/nvim-tree-config")
 require("user/which-key-config")
 require("user/keybindings")
@@ -37,7 +37,7 @@ vim.g.neon_style = "dark"
 vim.g.neon_italic_keyword = true
 vim.g.neon_italic_function = true
 
-vim.cmd[[colorscheme neon]]
+vim.cmd[[colorscheme horizon]]
 
 
 
