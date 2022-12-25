@@ -1,6 +1,6 @@
 require("lualine").setup {
 	options = {
-		theme = "moonlight",
+		theme = "horizon",
 		component_separators = "|",
 		section_separators = { left = "", right = "" },
 	},

@@ -132,3 +132,7 @@ cmp.event:on(
       capabilities = capabilities
   }
 
+  require('lspconfig')['pylsp'].setup {
+      capabilities = capabilities
+  }
+

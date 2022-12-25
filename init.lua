@@ -23,21 +23,21 @@ vim.opt.timeoutlen=500
 vim.opt.foldtext = 'v:lua.require("essentials").simple_fold()'
 --include all plugins, and packer.nvim
 require("user/plugins")
-require("user/treesitter-config")
-require("user/lualine-config")
-require("user/nvim-tree-config")
-require("user/which-key-config")
-require("user/keybindings")
-require("user/bufferline-config")
-require("user/lsp")
-require("user/dashboard")
-require("user/autopairs-config")
-require("user/ToggleTerm-config")
-vim.g.neon_style = "dark"
-vim.g.neon_italic_keyword = true
-vim.g.neon_italic_function = true
+--require("user/treesitter-config")
+--require("user/lualine-config")
+--require("user/nvim-tree-config")
+--require("user/which-key-config")
+--require("user/keybindings")
+--require("user/bufferline-config")
+--require("user/lsp")
+--require("user/dashboard")
+--require("user/autopairs-config")
+--require("user/ToggleTerm-config")
+--vim.g.neon_style = "dark"
+--vim.g.neon_italic_keyword = true
+--vim.g.neon_italic_function = true
 
-vim.cmd[[colorscheme horizon]]
+--vim.cmd[[colorscheme horizon]]
 
 
 
