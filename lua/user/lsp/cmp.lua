@@ -123,7 +123,6 @@ cmp.event:on(
 
   -- Set up lspconfig.
   local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-  
   require('lspconfig')['tsserver'].setup {
     capabilities = capabilities
   }
@@ -132,7 +131,7 @@ cmp.event:on(
       capabilities = capabilities
   }
 
-  require('lspconfig')['pylsp'].setup {
+  require('lspconfig')['clangd'].setup {
       capabilities = capabilities
   }
 

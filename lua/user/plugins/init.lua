@@ -12,7 +12,6 @@ return require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
   use "rafamadriz/neon"
   use "lunarvim/horizon.nvim"
-  use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
    use {
    'nvim-lualine/lualine.nvim',
    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -35,6 +34,11 @@ return require('packer').startup(function(use)
     config = function() require("nvim-autopairs").setup {} end
   }
   use 'jiangmiao/auto-pairs'
+  --indent-blankline:
+  require("packer").startup(function()
+    use "lukas-reineke/indent-blankline.nvim"
+  end)
+  --
   --bufferline, statusline, telescope
   use 'tamton-aquib/staline.nvim'
 
@@ -89,4 +93,16 @@ return require('packer').startup(function(use)
 
   --dashboard
   use 'glepnir/dashboard-nvim'
+
+  use {
+    'goolord/alpha-nvim',
+  }
+
+
+
+  -- Project Management
+  use { 'nvim-telescope/telescope-project.nvim' }
+  use 'vimwiki/vimwiki'
+  use 'tools-life/taskwiki'
 end)
+
