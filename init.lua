@@ -1,3 +1,17 @@
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.g.mapleader = ' '
+vim.g.maplocalleader= ' ';
+vim.opt.rtp:prepend(lazypath)
 vim.opt.tabstop=4 vim.opt.softtabstop=4
 vim.opt.shiftwidth=4
 vim.opt.expandtab=true
@@ -36,6 +50,7 @@ require("user/dashboard")
 require("user/autopairs-config")
 require("user/ToggleTerm-config")
 require("user/telescope-config")
+require("user/Markdown-config")
 vim.g.neon_style = "dark"
 vim.g.neon_italic_keyword = true
 vim.g.neon_italic_function = true

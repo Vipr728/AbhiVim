@@ -1,108 +1,101 @@
-return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+return require('lazy').setup({ 
 
+
+  --misc
+  'xolox/vim-misc',
+
+   --essentials
+  'tamton-aquib/essentials.nvim',
   --themes
-  use 'rose-pine/neovim'
-  use 'sainnhe/edge'
-  use 'joshdick/onedark.vim'
-  use 'xolox/vim-colorscheme-switcher'
-  use 'shaunsingh/moonlight.nvim'
-  use 'catppuccin/nvim'
-  use 'folke/tokyonight.nvim'
-  use "rafamadriz/neon"
-  use "lunarvim/horizon.nvim"
-   use {
+  'rose-pine/neovim',
+  'sainnhe/edge',
+  'joshdick/onedark.vim',
+  'xolox/vim-colorscheme-switcher',
+  'shaunsingh/moonlight.nvim',
+  'catppuccin/nvim',
+  'folke/tokyonight.nvim',
+   'rafamadriz/neon',
+   'lunarvim/horizon.nvim',
+   {
    'nvim-lualine/lualine.nvim',
-   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-   }
+   dependencies = { 'kyazdani42/nvim-web-devicons', opt = true }
+   },
 
 
   --toggleTerm
-  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+   {"akinsho/toggleterm.nvim", tag = 'v2.2.1', config = function()
   require("toggleterm").setup()
-  end}
-  --plenary
-  use 'nvim-lua/plenary.nvim'
+  end},
+    --treesitter
 
-  --treesitter
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSupdate'}
+  {'nvim-treesitter/nvim-treesitter', build = ':TSupdate'},
 
   --autopairs
-  use {
+  {
 	"windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
-  }
-  use 'jiangmiao/auto-pairs'
+  },
+  'jiangmiao/auto-pairs',
   --indent-blankline:
-  require("packer").startup(function()
-    use "lukas-reineke/indent-blankline.nvim"
-  end)
+  'lukas-reineke/indent-blankline.nvim',
   --
   --bufferline, statusline, telescope
-  use 'tamton-aquib/staline.nvim'
+  'tamton-aquib/staline.nvim',
+  'BurntSushi/ripgrep',
 
-
-  use {
+  {
    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-   requires = { {'nvim-lua/plenary.nvim'} }
-  }
+   dependencies = { {'nvim-lua/plenary.nvim'} }
+  },
+
   --nvim notify
-  use 'rcarriga/nvim-notify'
+  'rcarriga/nvim-notify',
 
   --nvim-tree
-  use {
+  {
     'kyazdani42/nvim-tree.lua',
-    requires = {
+    dependencies = {
         'kyazdani42/nvim-web-devicons', -- optional, for file icons
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  }
+  },
 
   --which-key
   -- Lua
-    use {
+    {
         "folke/which-key.nvim",
         config = "require('user/which-key-config')"
-    }
+    },
 
   --bufferline
 
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+  {'akinsho/bufferline.nvim', tag = "v3.1.0", dependencies = 'kyazdani42/nvim-web-devicons'},
   --devicons
-  use 'kyazdani42/nvim-web-devicons'
+  'kyazdani42/nvim-web-devicons',
 
   --lsp
-  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+  'neovim/nvim-lspconfig', -- Configurations for Nvim LSP
 
-  --misc
-  use 'xolox/vim-misc'
-
-    --essentials
-  use 'tamton-aquib/essentials.nvim'
   --lsp
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
-  use 'williamboman/mason.nvim'
-  use 'jose-elias-alvarez/null-ls.nvim'
-  use 'hrsh7th/cmp-vsnip'
-  use 'hrsh7th/vim-vsnip'
+  'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/cmp-buffer',
+  'hrsh7th/cmp-path',
+  'hrsh7th/cmp-cmdline',
+  'hrsh7th/nvim-cmp',
+  'williamboman/mason.nvim',
+  'jose-elias-alvarez/null-ls.nvim',
+  'hrsh7th/cmp-vsnip',
+  'hrsh7th/vim-vsnip',
 
   --dashboard
-  use 'glepnir/dashboard-nvim'
+  'glepnir/dashboard-nvim',
 
-  use {
     'goolord/alpha-nvim',
-  }
 
 
 
   -- Project Management
-  use { 'nvim-telescope/telescope-project.nvim' }
-  use 'vimwiki/vimwiki'
-  use 'tools-life/taskwiki'
-end)
+   'nvim-telescope/telescope-project.nvim',
+  'instant-markdown/vim-instant-markdown'
+})
 

@@ -1,4 +1,3 @@
-vim.g.mapleader = ' '
 local wk = require("which-key")
 local mappings = {
     q = { ":q<CR>", "Quit" },
