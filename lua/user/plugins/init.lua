@@ -1,4 +1,4 @@
-return require('lazy').setup({ 
+return require('lazy').setup({
 
 
   --misc
@@ -6,11 +6,12 @@ return require('lazy').setup({
 
    --essentials
   'tamton-aquib/essentials.nvim',
+  'lewis6991/impatient.nvim',
+  'nathom/filetype.nvim',
   --themes
   'rose-pine/neovim',
   'sainnhe/edge',
   'joshdick/onedark.vim',
-  'xolox/vim-colorscheme-switcher',
   'shaunsingh/moonlight.nvim',
   'catppuccin/nvim',
   'folke/tokyonight.nvim',

@@ -9,6 +9,7 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
+package.path = package.path .. ";/home/abhinav/.config/nvim/lua/user/?.lua"
 vim.g.mapleader = ' '
 vim.g.maplocalleader= ' ';
 vim.opt.rtp:prepend(lazypath)
@@ -39,17 +40,18 @@ vim.cmd([[set nocompatible]])
 vim.cmd([[filetype plugin on]])
 --include all plugins, and packer.nvim
 require("user/plugins")
+require('impatient')
+require("user/telescope-config")
+require("user/which-key")
 require("user/treesitter-config")
 require("user/lualine-config")
 require("user/nvim-tree-config")
-require("user/which-key-config")
 require("user/keybindings")
 require("user/bufferline-config")
 require("user/lsp")
 require("user/dashboard")
 require("user/autopairs-config")
 require("user/ToggleTerm-config")
-require("user/telescope-config")
 require("user/Markdown-config")
 vim.g.neon_style = "dark"
 vim.g.neon_italic_keyword = true

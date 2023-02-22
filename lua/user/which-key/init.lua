@@ -1,4 +1,9 @@
-local wk = require("which-key")
+local wk = require("which-key");
+package.path = package.path .. ';../?.lua'
+ function Switch_projects()
+  local telescope = require('telescope-config.init')
+  telescope.switch_projects()
+end
 local mappings = {
     q = { ":q<CR>", "Quit" },
     w = { ":w<CR>", "Save" },
@@ -19,9 +24,10 @@ local mappings = {
     e = { ":NvimTreeToggle<CR>", "NvimTree" },
     ff = { ":Telescope find_files<CR>", "find file" },
     fp = { ":Telescope project<CR>", "Projects" },
+    fx = { ":execute 'lua Switch_projects()'<CR>", "Switch Projects" },
     fb = { ":NvimTreeToggle<CR>", "File Browser" },
     fd = { ":e $MYVIMRC<CR>", "Edit Config Files" },
-    H = {":Telescope oldfiles<CR>", "Recent Files"},
+    H = { ":Telescope oldfiles<CR>", "Recent Files" },
 }
 local opts = { prefix = '<leader>' }
 wk.register(mappings, opts)
