@@ -38,6 +38,8 @@ vim.opt.timeoutlen=500
 vim.opt.foldtext = 'v:lua.require("essentials").simple_fold()'
 vim.cmd([[set nocompatible]])
 vim.cmd([[filetype plugin on]])
+vim.cmd([[set clipboard=unnamedplus]])
+
 --include all plugins, and packer.nvim
 require("user/plugins")
 require('impatient')
