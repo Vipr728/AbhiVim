@@ -7,5 +7,6 @@ function M.setup()
   }
   npairs.add_rules(require "nvim-autopairs.rules.endwise-lua")
 end
+-- Sreedhar line 
 
 return M
